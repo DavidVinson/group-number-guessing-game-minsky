@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Guess A Number!</title>
-  <script src="scripts/client.js" defer></script>
-  <link rel="stylesheet" href="styles/styles.css">
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Guess A Number!</title>
+    <script defer src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="scripts/client.js" defer></script>
+    <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
     <h1>YOUR GAME HERE!</h1>
-</body>
+    <form onsubmit="postGuess(event)">
+      <input id="player-1" type="text" value="1" />
+      <input id="player-2" type="text" value="5" />
+      <button>Take a Guess</button>
+    </form>
+    <h2>Player Guesses</h2>
+    <ul id="guess-list"></ul>
+
+    <h2>Winner</h2>
+    <p id="game-winner">WINNER GOES HERE</p>
+  </body>
 </html>
